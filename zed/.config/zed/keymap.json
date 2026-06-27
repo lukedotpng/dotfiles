@@ -1,0 +1,63 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            // "shift shift": "file_finder::Toggle"
+        },
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            // "j k": ["workspace::SendKeystrokes", "escape"]
+            "alt-right": "editor::MoveToEndOfLine",
+            "alt-left": "editor::MoveToBeginningOfLine",
+            "alt-shift-right": "editor::SelectToEndOfLine",
+            "alt-backspace": "editor::DeleteToBeginningOfLine",
+            "alt-shift-left": "editor::SelectToBeginningOfLine",
+            "ctrl-alt-up": "editor::DuplicateLineUp",
+            "ctrl-alt-down": "editor::DuplicateLineDown",
+            "ctrl-up": ["editor::MoveUpByLines", { "lines": 5 }],
+            "ctrl-down": ["editor::MoveDownByLines", { "lines": 5 }],
+            "ctrl-enter": "editor::NewlineBelow",
+            "ctrl-shift-l": [
+                "workspace::SendKeystrokes",
+                "ctrl-x console.log(\" ctrl-v : \", space ctrl-v );",
+            ],
+        },
+    },
+    {
+        "bindings": {
+            "ctrl-alt-shift-l": "editor::ConvertToLowerCase",
+            "ctrl-alt-shift-u": "editor::ConvertToUpperCase",
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "alt-shift-up": [
+                "editor::AddSelectionAbove",
+                {
+                    "skip_soft_wrap": true
+                }
+            ]
+        }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "alt-shift-down": [
+                "editor::AddSelectionBelow",
+                {
+                    "skip_soft_wrap": true
+                }
+            ]
+        }
+    }
+]
