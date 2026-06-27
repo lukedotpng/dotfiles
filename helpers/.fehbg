@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill --no-xinerama '/home/luke/Pictures/Wallpapers/rrlan_dock_panorama.png' 
